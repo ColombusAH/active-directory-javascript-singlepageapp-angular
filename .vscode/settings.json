@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/a6feaa8a-7e52-41d6-912b-676da844c164/resourceGroups/ubo/providers/Microsoft.Web/sites/ubo",
+  "appService.deploySubpath": "."
+}
