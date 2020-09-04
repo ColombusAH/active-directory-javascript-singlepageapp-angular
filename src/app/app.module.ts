@@ -33,28 +33,27 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     AppRoutingModule,
     MsalModule.forRoot({
       auth: {
-        clientId: 'Enter_the_Application_Id_Here',
-        authority: 'Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here',
-        redirectUri: 'Enter_the_Redirect_Uri_Here',
+        clientId: 'a02661ef-e3c5-4fdf-bed0-e4aa3890cffd',
+        authority: 'https://login.microsoftonline.com/4377190f-4d4b-45b9-adb9-88e5f5c298b7',
+        redirectUri: 'http://localhost:4200',
       },
       cache: {
         cacheLocation: 'localStorage',
         storeAuthStateInCookie: isIE, // set to true for IE 11
       },
     },
-    {
-      popUp: !isIE,
-      consentScopes: [
-        'user.read',
-        'openid',
-        'profile',
-      ],
-      unprotectedResources: [],
-      protectedResourceMap: [
-        ['Enter_the_Graph_Endpoint_Herev1.0/me', ['user.read']]
-      ],
-      extraQueryParameters: {}
-    })
+      {
+        popUp: !isIE,
+        consentScopes: [
+          'user.read',
+          'email',
+        ],
+        unprotectedResources: [],
+        protectedResourceMap: [
+          // ['Enter_the_Graph_Endpoint_Herev1.0/me', ['user.read']]
+        ],
+        extraQueryParameters: {}
+      })
   ],
   providers: [
     {

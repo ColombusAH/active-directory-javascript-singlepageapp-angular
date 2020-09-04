@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  azure_config : {
+    clientId: 'a02661ef-e3c5-4fdf-bed0-e4aa3890cffd',
+  }
 };
 
 /*
